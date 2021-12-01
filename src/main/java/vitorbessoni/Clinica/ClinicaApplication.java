@@ -1,8 +1,8 @@
 package vitorbessoni.Clinica;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.apache.log4j.PropertyConfigurator;
 
 @SpringBootApplication
 public class ClinicaApplication {

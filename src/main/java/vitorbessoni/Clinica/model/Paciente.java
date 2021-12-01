@@ -29,14 +29,6 @@ public class Paciente {
     public Paciente() {
     }
 
-    public Paciente(String nome, String sobrenome, Integer idade, String email, List<Consulta> consultas) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.idade = idade;
-        this.email = email;
-        this.consultas = consultas;
-    }
-
     public Integer getId() {
         return id;
     }
@@ -45,39 +37,46 @@ public class Paciente {
         return nome;
     }
 
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public Integer getIdade() {
-        return idade;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public List<Consulta> getConsultas() {
-        return consultas;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
     }
 
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
 
+    public Integer getIdade() {
+        return idade;
+    }
+
     public void setIdade(Integer idade) {
         this.idade = idade;
     }
 
+    public String getEmail() {
+        return email;
+    }
     public void setEmail(String email) {
         this.email = email;
     }
 
+    public List<Consulta> getConsultas() {
+        return consultas;
+    }
+
     public void setConsultas(List<Consulta> consultas) {
+        this.consultas = consultas;
+    }
+
+    public Paciente(String nome, String sobrenome, Integer idade, String email, List<Consulta> consultas) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.idade = idade;
+        this.email = email;
         this.consultas = consultas;
     }
 }

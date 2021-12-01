@@ -44,7 +44,7 @@ public class ConsultaService {
     }
 
     public Consulta buscarPorID(Integer id){
-        logger.info("Busca de uma Consulta pelo ID realizada");
+        logger.info("Buscar Consulta pelo ID concluida");
         return consultaRepository.getById(id);
     }
 
@@ -55,13 +55,13 @@ public class ConsultaService {
         consulta.setHora(dao.getHora());
 
         consultaRepository.save(consulta);
-        logger.info("Consulta editada");
+        logger.info("Consulta alterada");
         return consulta;
     }
     public String delete(Integer id){
         consultaRepository.deleteById(id);
-        logger.info("Consulta deletada");
-        return "Deletado com sucesso";
+        logger.info("Consulta excluida");
+        return "Excluido com sucesso";
     }
 
 }

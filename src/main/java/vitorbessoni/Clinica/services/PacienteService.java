@@ -29,7 +29,7 @@ public class PacienteService {
         return repository.findAll();
     }
     public Paciente buscarPorID(Integer id){
-        logger.info("Busca de um Paciente pelo ID realizada");
+        logger.info("Busca de Paciente pelo ID concluida");
         return repository.getById(id);
     }
     // UPDATE
@@ -41,7 +41,7 @@ public class PacienteService {
         paciente.setIdade(dao.getIdade());
         paciente.setEmail(dao.getEmail());
 
-        logger.info("Paciente editado");
+        logger.info("Paciente alterado");
 
         repository.save(paciente);
         return paciente;
@@ -49,8 +49,8 @@ public class PacienteService {
     // DELETE
     public String delete(Integer id){
         repository.deleteById(id);
-        logger.info("Paciente deletado");
-        return "Paciente deletado com sucesso.";
+        logger.info("Paciente excluido");
+        return "Paciente excluido com sucesso.";
     }
 
 }
